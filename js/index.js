@@ -16,6 +16,24 @@ function range(values) {
     return [values[10], values[values.length-10]];
 }
 
+	
+// Create additional Control placeholders
+function addControlPlaceholders(map) {
+    var corners = map._controlCorners,
+        l = 'leaflet-',
+        container = map._controlContainer;
+
+    function createCorner(vSide, hSide) {
+        var className = l + vSide + ' ' + l + hSide;
+
+        corners[vSide + hSide] = L.DomUtil.create('div', className, container);
+    }
+
+    createCorner('verticalcenter', 'left');
+    createCorner('verticalcenter', 'right');
+}
+
+
 var AGGREGATION = {
     median: median,
     max: max,
@@ -51,7 +69,8 @@ angular
       layers: [baseLayer]  
     });
     
-    map.zoomControl.setPosition('bottomright');
+    addControlPlaceholders(map);
+    map.zoomControl.setPosition('verticalcenterleft');
 
 
     map.on('zoomstart', function() {
