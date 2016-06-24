@@ -57,6 +57,15 @@ angular
         maxZoom: 17
       }
     );
+    
+    var nyuLayer = L.tileLayer(
+          'http://capstone.cloudapp.net/wifipulling/tile/{z}/{x}/{y}/?ssid={ssid}&agg_function={agg_function}', {
+            ssid: 'nyu',
+            agg_function: 'median',
+            maxZoom: 18,
+            opacity: .5
+          }
+        );
 
     var heatmapLayer;
 
@@ -71,6 +80,7 @@ angular
     
     addControlPlaceholders(map);
     map.zoomControl.setPosition('verticalcenterleft');
+    map.addLayer(nyuLayer);
 
 
     map.on('zoomstart', function() {
