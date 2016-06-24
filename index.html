@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -50,7 +49,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <span class="light">WiFi<FONT COLOR="#BAC6E5">nd</FONT></span>
+                    <span class="light">WiFi<FONT COLOR="#acbbe3">nd</FONT></span>
                 </a>
             </div>
 
@@ -86,7 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h7 class="brand-heading">WiFi<FONT COLOR="#BAC6E5">nd</FONT></h7>
+                        <h7 class="brand-heading">WiFi<FONT COLOR="#acbbe3">nd</FONT></h7>
                         <p class="intro-text">Mapping the Prevalence of Wi-Fi Coverage<br>throughout New York City.</p>
                         <a href="#currentmap" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -98,31 +97,32 @@
     </header>
     
     <!-- Map Intro Section -->
-    <section id="currentmap" class="map-section text-center">
-        <div class="container">
-            <div class="row">
-                 <div class="col-lg-8 col-lg-offset-2">
-                     <form class="form-inline" id="seach-bar">
-                         <div class="form-group">
-                             <label for="SSID"> Network Name: </label>
-                             <input type="text" class="form-control" ng-model='params.ssid' placeholder="nyu">
-                         </div>
-                         <div class="form-group">
-                             <label for="aggregation">Aggregation Function:</label>
-                             <select name="aggregation" class="form-control" ng-model="params.aggregation">
-                                 <option value="median" selected="selected">Median</option>
-                                 <option value="mean">Mean</option>
-                                 <option value="max">Max</option>
-                             </select>
-                         </div>
-                         <button class="btn btn-default" ng-click="execute()">Show Data</button>
-                    </form>
-                    <img src="img/legend.png" class="img-fluid" width="100%">
-                    <figcaption class="figure-caption">Signal Intensity (dB)</figcaption>      
-                 </div>
+    <section id="currentmap" class="map-section text-center"></section>
+    
+    <div class="container text-center" id="search-bar">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2">
+                 <form class="form-inline">
+                     <div class="form-group">
+                         <label for="SSID"> Network Name: </label>
+                         <input type="text" class="form-control" ng-model='params.ssid' placeholder="nyu">
+                     </div>
+                     <div class="form-group">
+                         <label for="aggregation">Aggregation Function:</label>
+                         <select name="aggregation" class="form-control" ng-model="params.aggregation">
+                             <option value="median" selected="selected">Median</option>
+                             <option value="mean">Mean</option>
+                             <option value="max">Max</option>
+                         </select>
+                     </div>
+                     <button class="btn btn-default" ng-click="execute()">Show Data</button>
+                </form>
+                <img src="img/legend.png" class="img-fluid" width="100%">
+                <figcaption class="figure-caption">Signal Intensity (dB)</figcaption>      
              </div>
-        </div>
-    </section>
+         </div>
+    </div>
+    
     
     <!-- Map-Intro Section -->
     <section id="mapintro" class="mapintro-section text-center">
