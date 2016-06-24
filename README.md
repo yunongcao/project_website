@@ -22,4 +22,4 @@ To do list:
 
 ### Future Work: 
 
-* Autocomplete
+* Autocomplete SSID field
