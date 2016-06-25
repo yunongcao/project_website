@@ -50,6 +50,18 @@ h7 {
     letter-spacing: 1px;
 }
 
+h8 {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+#colorbar {
+    padding: 7px;
+}
+
+
 p {
     margin: 0 0 25px;
     font-size: 18px;
@@ -294,7 +306,6 @@ a:focus {
 .map-section {
     position: relative;
     height: 65%;
-/*    z-index: -1;*/
 }
 
 @media(min-width:768px) {
@@ -304,6 +315,19 @@ a:focus {
         z-index: -1;
     }
 }
+
+/*
+.map-title {
+    position: relative;
+    height: 4%;
+}
+
+@media(min-width:768px) {
+        .map-title {
+        height: 4%;
+    }
+}
+*/
 
 
 #search-bar{
