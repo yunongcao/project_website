@@ -71,7 +71,7 @@ angular
           'http://capstone.cloudapp.net/wifipulling/greyTile/{z}/{x}/{y}', {
             maxZoom: 18,
             opacity: .5
-          };
+          });
 
     var map = new L.Map('map', {
       center: new L.LatLng(40.7295134, -73.9964609),
